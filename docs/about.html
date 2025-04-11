@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Keto Elite</title>
+    <meta name="description" content="Learn more about Keto Elite, our mission, and our team.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2A2A2A',
+                        accent: '#FFD700',
+                        secondary: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .btn-gold {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #f3f4f6;
+        }
+        .dark-mode .dark-bg {
+            background-color: #2A2A2A;
+        }
+        .dark-mode .dark-text {
+            color: #f3f4f6;
+        }
+        .dark-mode .dark-border {
+            border-color: #4b5563;
+        }
+        .floating-social {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 100;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        .countdown {
+            font-family: monospace;
+        }
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .food-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .food-image:hover {
+            transform: scale(1.05);
+        }
+        .food-image img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Dark Mode Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="darkModeToggle" class="p-2 rounded-full bg-primary text-accent shadow-lg">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Floating Social Buttons -->
+    <div class="floating-social flex flex-col space-y-3">
+        <a href="#" class="social-icon bg-blue-600 text-white p-3 rounded-full shadow-lg">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-icon bg-pink-600 text-white p-3 rounded-full shadow-lg">
+            <i class="fab fa-pinterest-p"></i>
+        </a>
+        <a href="#" class="social-icon bg-red-600 text-white p-3 rounded-full shadow-lg">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-primary text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-utensils text-accent text-2xl"></i>
+                <span class="font-serif text-xl font-bold">Keto<span class="text-accent">Elite</span></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-accent transition">Home</a>
+                <a href="#" class="hover:text-accent transition">Recipes</a>
+                <a href="#" class="hover:text-accent transition">Success Stories</a>
+                <a href="#" class="hover:text-accent transition">Blog</a>
+                <a href="#" class="hover:text-accent transition">Contact</a>
+                <a href="about.html" class="hover:text-accent transition">About Us</a>
+            </div>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32 px-4">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">
+                About Us
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Learn more about Keto Elite, our mission, and our team.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Us Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">
+                Our <span class="text-accent">Mission</span>
+            </h2>
+            <p class="text-gray-600 text-lg mb-8">
+                At Keto Elite, our mission is to help you achieve your health goals through delicious, science-backed keto recipes. We believe that eating healthy should be enjoyable and sustainable, and our team of professional chefs and nutritionists work tirelessly to create recipes that are both nutritious and delicious.
+            </p>
+            <p class="text-gray-600 text-lg mb-8">
+                Whether you're looking to lose weight, improve your energy levels, or simply enjoy a healthier lifestyle, our keto recipes are designed to help you succeed. We are committed to providing you with the tools and resources you need to make keto a part of your everyday life.
+            </p>
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">
+                Meet Our <span class="text-accent">Team</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition">
+                    <img src="assets/images/team-1.jpg" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="font-bold text-xl mb-3">John Doe</h3>
+                    <p class="text-gray-600">Head Chef</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition">
+                    <img src="assets/images/team-2.jpg" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="font-bold text-xl mb-3">Jane Smith</h3>
+                    <p class="text-gray-600">Nutritionist</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition">
+                    <img src="assets/images/team-3.jpg" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="font-bold text-xl mb-3">Emily Johnson</h3>
+                    <p class="text-gray-600">Recipe Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-utensils text-accent text-2xl"></i>
+                        <span class="font-serif text-xl font-bold">Keto<span class="text-accent">Elite</span></span>
+                    </div>
+                    <p class="text-gray-300">Helping you achieve your health goals through delicious, science-backed keto recipes since 2018.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Home</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Recipes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Success Stories</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Contact</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">DMCA</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-300 hover:text-accent transition text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition text-xl"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="text-gray-300">
+                        <i class="fas fa-envelope mr-2"></i> support@ketoelite.tk
+                    </p>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700">
+                <p class="text-gray-300 text-center">
+                    <strong>Affiliate Disclosure:</strong> As an Amazon/ClickBank Associate, we earn from qualifying purchases. This supports our research and lets us create free content for you!
+                </p>
+                <p class="text-center text-gray-400 mt-4">
+                    © 2023 KetoElite.TK. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const icon = darkModeToggle.querySelector('i');
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
