@@ -10,3 +10,5 @@ A beautiful, responsive website for keto recipes with:
 ## Deployment
 1. Upload to GitHub
 2. Enable GitHub Pages in Settings
+3. Ensure the repository is set to public
+4. Verify the site is live at the provided URL
