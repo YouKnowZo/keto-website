@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Keto Avocado Salad",
+        "ingredients": [
+            "2 avocados, diced",
+            "1 cucumber, diced",
+            "1/4 red onion, thinly sliced",
+            "1/4 cup cilantro, chopped",
+            "2 tbsp olive oil",
+            "1 tbsp lime juice",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "In a large bowl, combine the avocados, cucumber, red onion, and cilantro.",
+            "Drizzle with olive oil and lime juice.",
+            "Season with salt and pepper to taste.",
+            "Toss gently to combine.",
+            "Serve immediately."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Keto Buddha Bowl",
+        "ingredients": [
+            "1 cup cauliflower rice",
+            "1/2 cup cooked chicken breast, diced",
+            "1/4 cup cherry tomatoes, halved",
+            "1/4 cup cucumber, diced",
+            "1/4 avocado, sliced",
+            "2 tbsp tahini sauce",
+            "1 tbsp olive oil",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "In a bowl, layer the cauliflower rice, chicken, cherry tomatoes, cucumber, and avocado.",
+            "Drizzle with tahini sauce and olive oil.",
+            "Season with salt and pepper to taste.",
+            "Serve immediately."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Keto Salmon",
+        "ingredients": [
+            "2 salmon fillets",
+            "2 tbsp olive oil",
+            "1 lemon, sliced",
+            "2 cloves garlic, minced",
+            "1 tbsp fresh dill, chopped",
+            "Salt and pepper to taste"
+        ],
+        "instructions": [
+            "Preheat the oven to 375°F (190°C).",
+            "Place the salmon fillets on a baking sheet.",
+            "Drizzle with olive oil and top with lemon slices, garlic, and dill.",
+            "Season with salt and pepper to taste.",
+            "Bake for 15-20 minutes, or until the salmon is cooked through.",
+            "Serve immediately."
+        ]
+    }
+]
