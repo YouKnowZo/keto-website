@@ -6,6 +6,7 @@ A beautiful, responsive website for keto recipes with:
 - Mobile-friendly design
 - Countdown timer
 - Testimonials section
+- Contact form functionality
 
 ## Deployment
 1. Upload to GitHub
@@ -20,3 +21,6 @@ A beautiful, responsive website for keto recipes with:
 4. Run `npm install` to install dependencies
 5. Run `npm start` to start the backend server
 6. The backend API will be available at `http://localhost:3000`
+
+## Contact Form
+The website includes a contact form on the `index.html` and `about.html` pages. The form allows users to submit their name, email, and message. The form data is sent to the backend API, which handles the submission by sending an email with the form details.

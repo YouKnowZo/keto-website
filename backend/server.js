@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,9 +28,30 @@ app.post('/contact', (req, res) => {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
-    // Here you can add code to save the contact form data to a database or send an email
+    // Create a transporter object using the default SMTP transport
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'your-email@gmail.com',
+            pass: 'your-email-password'
+        }
+    });
 
-    res.json({ success: 'Contact form submitted successfully' });
+    // Set up email data
+    const mailOptions = {
+        from: email,
+        to: 'your-email@gmail.com',
+        subject: 'New Contact Form Submission',
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            return res.status(500).json({ error: 'Failed to send email' });
+        }
+        res.json({ success: 'Contact form submitted successfully' });
+    });
 });
 
 app.listen(PORT, () => {
